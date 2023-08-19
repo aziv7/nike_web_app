@@ -24,6 +24,15 @@ const Nav = () => {
             </li>
           ))}
         </ul>
+        <div className='inline lg:hidden'>
+          <img
+            className='cursor-pointer'
+            width={25}
+            height={25}
+            src={hamburger}
+            alt='hamburger menu icon'
+          />
+        </div>
       </nav>
     </header>
   );
