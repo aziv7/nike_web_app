@@ -6,14 +6,15 @@ import SpecialOffer from '@/components/SpecialOffer';
 import CustomerReviews from '@/components/CustomerReviews';
 import Subscribe from '@/components/Subscribe';
 import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
 
 function App() {
   return (
     <main className='relative'>
+      <Nav />{' '}
       <section className='xl:padding-1 wide:padding-r padding-b'>
-        <Nav />
+        <Hero />
       </section>
-
       <section className='padding'>
         <PopularProducts />
       </section>
