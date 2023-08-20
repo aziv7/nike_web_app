@@ -1,7 +1,16 @@
 import React from 'react';
 
 const PopularProducts = () => {
-  return <div>PopularProducts</div>;
+  return (
+    <section
+      id='products'
+      className='flex flex-1 
+  flex-col 
+  w-full 
+  max-sm:w-full'>
+      PopularProducts
+    </section>
+  );
 };
 
 export default PopularProducts;
