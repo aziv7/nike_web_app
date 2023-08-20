@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Button from './Button';
 import { arrowRight } from '@/assets/icons';
 import { statistics } from '@/data';
@@ -6,6 +6,7 @@ import { bigShoe1 } from '@/assets/images';
 import { shoes } from '@/data';
 import ShoeItem from './ShoeItem';
 const Hero = () => {
+  const [selected, setSelected] = useState(shoes[0].bigShoe);
   return (
     <section
       id='home'
@@ -78,7 +79,7 @@ space-x-16'>
       items-center xl:min-h-screen bg-center bg-hero
       bg-primary bg-cover'>
         <img
-          src={bigShoe1}
+          src={selected}
           alt='Shoe image'
           className='object-contain z-10 relative'
           width={610}
@@ -88,7 +89,7 @@ space-x-16'>
           className='flex flex-row items-center 
           justify-center 
           
-           sm:space-6 
+           sm:space-x-9 
           space-4 absolute
           -bottom-32 sm:-bottom-44 xl:bottom-6 
             max-sm:px-6 
@@ -96,8 +97,10 @@ space-x-16'>
           {shoes.map((shoe) => (
             <ShoeItem
               img={shoe}
-              changeSelectedShoe={() => {}}
-              bigShoeImg=''
+              changeSelectedShoe={() => {
+                setSelected(shoe.bigShoe);
+              }}
+              bigShoeImg={selected}
               key={JSON.stringify(shoe)}
             />
           ))}

@@ -12,7 +12,7 @@ const ShoeItem = ({ img, changeSelectedShoe, bigShoeImg }) => {
       className={`border-2 rounded-xl cursor-pointer
       max-sm:flex-1
   transition-all ease-in-out duration-300
-  ${bigShoeImg === img ? 'border-coral-red' : 'border-transparent'}
+  ${bigShoeImg === img.bigShoe ? 'border-coral-red' : 'border-transparent'}
   `}>
       <div
         className='flex justify-center items-center bg-center
