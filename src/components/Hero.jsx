@@ -3,6 +3,8 @@ import Button from './Button';
 import { arrowRight } from '@/assets/icons';
 import { statistics } from '@/data';
 import { bigShoe1 } from '@/assets/images';
+import { shoes } from '@/data';
+import ShoeItem from './ShoeItem';
 const Hero = () => {
   return (
     <section
@@ -10,7 +12,7 @@ const Hero = () => {
       className='w-full flex
 xl:flex-row flex-col
 justify-center min-h-screen
-space-10 max-container'>
+space-10 max-container my-10'>
       <div
         className='relative
 xl:w-2/5 flex flex-col
@@ -82,6 +84,24 @@ space-x-16'>
           width={610}
           height={500}
         />
+        <div
+          className='flex flex-row items-center 
+          justify-center 
+          
+           sm:space-6 
+          space-4 absolute
+          -bottom-32 sm:-bottom-44 xl:bottom-6 
+            max-sm:px-6 
+        '>
+          {shoes.map((shoe) => (
+            <ShoeItem
+              img={shoe}
+              changeSelectedShoe={() => {}}
+              bigShoeImg=''
+              key={JSON.stringify(shoe)}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
