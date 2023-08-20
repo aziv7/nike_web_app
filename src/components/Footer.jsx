@@ -2,6 +2,7 @@ import React from 'react';
 import { footerLinks } from '@/data';
 import { copyrightSign } from '@/assets/icons';
 import { footerLogo } from '@/assets/images';
+import { socialMedia } from '../data';
 const Footer = () => {
   return (
     <footer className='max-container'>
