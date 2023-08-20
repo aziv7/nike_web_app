@@ -10,12 +10,14 @@ const Button = ({ label, icon }) => {
     bg-coral-red rounded-full text-white
     border-coral-red'>
       <span>{label}</span>
-      <img
-        src={icon}
-        className='transition-all ease-in-out 
+      {icon != null && (
+        <img
+          src={icon}
+          className='transition-all ease-in-out 
       duration-500 group-hover:translate-x-5 w-5 h-5 ml-2 rounded-full'
-        alt=''
-      />
+          alt=''
+        />
+      )}
     </button>
   );
 };
