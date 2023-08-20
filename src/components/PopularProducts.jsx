@@ -1,16 +1,10 @@
 import React from 'react';
 import PopularProductCard from './PopularProductCard';
+import { products } from '@/data';
 
-const PopularProducts = ({ img, name, price }) => {
-  function getRandomIntInclusive(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min + 1) + min); // The maximum is inclusive and the minimum is inclusive
-  }
-
+const PopularProducts = () => {
   return (
     <section id='products' className='max-container max-sm:mt-12'>
-      <img src={img} alt={name} className='w-[282px] h-[282px]' />
       <div
         className='flex flex-col 
         justify-start 
